@@ -6,3 +6,4 @@ coverage/
 !.env.example
 data/
 .DS_Store
+*.tsbuildinfo
