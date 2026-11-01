@@ -1,0 +1,73 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install ChatQuest dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"install"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "ChatQuest typecheck",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"typecheck"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "ChatQuest tests",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"test"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Build ChatQuest",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"build"
+			],
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Audit ChatQuest dependencies",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"audit",
+				"--json"
+			],
+			"isBackground": false,
+			"problemMatcher": []
+		},
+		{
+			"label": "Run ChatQuest locally",
+			"type": "shell",
+			"command": "npm",
+			"args": [
+				"run",
+				"dev"
+			],
+			"isBackground": true,
+			"problemMatcher": []
+		}
+	]
+}

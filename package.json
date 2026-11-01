@@ -1,0 +1,21 @@
+{
+  "name": "chatquest-ai",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "predev": "npm run build --workspace @chatquest/shared",
+    "pretypecheck": "npm run build --workspace @chatquest/shared",
+    "dev": "concurrently -k -n server,web -c magenta,cyan \"npm:dev --workspace @chatquest/server\" \"npm:dev --workspace @chatquest/web\"",
+    "build": "npm run build --workspace @chatquest/shared && npm run build --workspace @chatquest/server && npm run build --workspace @chatquest/web",
+    "test": "npm run test --workspace @chatquest/server",
+    "typecheck": "npm run typecheck --workspace @chatquest/shared && npm run typecheck --workspace @chatquest/server && npm run typecheck --workspace @chatquest/web"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.3"
+  }
+}
